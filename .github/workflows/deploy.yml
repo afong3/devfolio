@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: src
+        working-directory: /home/runner/work/devfolio/devfolio/src
     steps:
       - name: Debug file structure
         run: ls -R
