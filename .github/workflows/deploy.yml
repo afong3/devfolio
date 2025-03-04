@@ -18,6 +18,9 @@ jobs:
       run:
         working-directory: ./src
     steps:
+      - name: Debug file structure
+        run: ls -R
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
