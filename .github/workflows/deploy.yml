@@ -16,14 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print Working Directory
-        run: pwd
-
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Debug file structure
-        run: ls -R
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -38,16 +32,10 @@ jobs:
         run: npm run build
         working-directory: ./src
 
-      - name: Check wd again
-        run: pwd  # Ensure build output is present
-
-      - name: Debug dist folder
-        run: ls -R ./src/dist  # Ensure build output is present
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./src/dist  # Change this if your build output is in another folder
+          path: ./src/dist  
 
       - name: Deploy to GitHub Pages
         id: deployment
