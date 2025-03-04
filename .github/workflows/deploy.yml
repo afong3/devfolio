@@ -18,11 +18,13 @@ jobs:
     #   run:
     #     working-directory: /home/runner/work/devfolio/src
     steps:
-      - name: Debug file structure
-        run: ls -R
-
+      - name: Print Working Directory
+        run: pwd
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Debug file structure
+        run: ls -R
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
