@@ -38,7 +38,7 @@ jobs:
         run: npm run build
         working-directory: ./src
 
-       - name: Check wd again
+      - name: Check wd again
         run: pwd  # Ensure build output is present
 
       - name: Debug dist folder
