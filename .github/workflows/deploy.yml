@@ -14,9 +14,9 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: /home/runner/work/devfolio/src
+    # defaults:
+    #   run:
+    #     working-directory: /home/runner/work/devfolio/src
     steps:
       - name: Debug file structure
         run: ls -R
