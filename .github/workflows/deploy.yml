@@ -14,9 +14,7 @@ permissions:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: /home/runner/work/devfolio/src
+
     steps:
       - name: Print Working Directory
         run: pwd
@@ -43,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # Change this if your build output is in another folder
+          path: ./src/dist  # Change this if your build output is in another folder
 
       - name: Deploy to GitHub Pages
         id: deployment
