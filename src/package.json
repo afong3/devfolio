@@ -7,7 +7,7 @@
   "author": "Mark Macneil",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && echo 'Build Complete!'"
   },
   "devDependencies": {
     "bulma": "^0.9.3",
