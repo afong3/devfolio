@@ -38,6 +38,10 @@ jobs:
         run: npm run build
         working-directory: ./src
 
+      - name: Debug dist folder
+        run: ls -R ./src/dist  # Ensure build output is present
+        run: pwd
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
