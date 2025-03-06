@@ -7,6 +7,23 @@
   <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="css/main.bundle.css">
   <script src="https://kit.fontawesome.com/4e5a72c756.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+ <style>
+  /* Ensure the map has a size */
+  #map {
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/2.1.2/gpx.min.js" defer></script>
 </head>
 
 <body>
@@ -238,12 +255,6 @@
       <div class="img-row">
         <div class="img-column">
           <div class="container-image">
-            <img src="img/carousel/albania.png">
-            <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-1-modal">Cycling Through Albania</div>
-            </div>
-          </div>
-          <div class="container-image">
             <img src="img/fpga_accelerator.jpg">
             <div class="overlay">
               <div class="hover-text modal-trigger" data-target="project-2-modal">FPGA Neural Network Hardware Accelerator</div>
@@ -256,14 +267,6 @@
             </div>
           </div>
           <div class="container-image">
-            <img src="img/vancouver_cycling.png">
-            <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-2-modal">Cycling Through Vancouver</div>
-            </div>
-          </div>
-        </div>
-        <div class="img-column">
-          <div class="container-image">
             <img src="img/combine_harvesting.JPG">
             <div class="overlay">
               <div class="hover-text">Combine Harvesting</div>
@@ -275,27 +278,29 @@
               <div class="hover-text">Combine Harvesting</div>
             </div>
           </div>
+        </div>
+        <div class="img-column">
+          <div class="container-image">
+            <img src="img/tina_real.jpg">
+            <div class="overlay">
+              <div class="hover-text modal-trigger" data-target="project-2-modal">Tree Imaging Machine</div>
+            </div>
+          </div>
+          <div class="container-image">
+            <img src="img/tina_assembly.png">
+            <div class="overlay">
+              <div class="hover-text modal-trigger" data-target="project-2-modal">Tree Imaging Machine Model</div>
+            </div>
+          </div>
+          
           <div class="container-image">
             <img src="img/sensor_bracket.jpg">
             <div class="overlay">
               <div class="hover-text modal-trigger" data-target="project-2-modal">Sensor Bracket Design</div>
             </div>
           </div>
-          <div class="container-image">
-            <img src="img/bike_snack_bag.jpg">
-            <div class="overlay">
-              <div class="hover-text">DIY Snack Bag</div>
-            </div>
-          </div>
-          
         </div>
         <div class="img-column">
-          <div class="container-image">
-            <img src="img/first_14er.jpg">
-            <div class="overlay">
-              <div class="hover-text" data-target="project-2-modal">Climbing my first 14er Mountain</div>
-            </div>
-          </div>
           <div class="container-image">
             <img src="img/flying_seed_in_action.JPG">
             <div class="overlay">
@@ -320,44 +325,50 @@
               <div class="hover-text modal-trigger" data-target="project-2-modal">Anti-Bike Theft Capstone Project</div>
             </div>
           </div>
+  
         </div>
-        
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Bike Touring</h1>
+      <hr />
+      <div class="img-row">
         <div class="img-column">
+          <div class="container-image">
+            <img src="img/carousel/albania.png">
+            <div class="overlay">
+              <div class="hover-text modal-trigger" data-target="project-1-modal">Cycling Through Albania</div>
+            </div>
+          </div>
+        </div>
+        <div class="img-column">
+          <div class="container-image">
+            <img src="img/europe_bike_tour.png">
+            <div class="overlay">
+              <div class="hover-text modal-trigger" data-target="project-1-modal">100 Days of Cycle Touring in Europe</div>
+            </div>
+          </div>
           <div class="container-image">
             <img src="img/rocky_crossing.jpg">
             <div class="overlay">
               <div class="hover-text">Crossing the Rocky Mountains by Bicycle</div>
             </div>
           </div>
+        </div>
+        <div class="img-column">
           <div class="container-image">
-            <img src="img/tina_real.jpg">
+            <img src="img/usa_biking.png">
             <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-2-modal">Tree Imaging Machine</div>
+              <div class="hover-text modal-trigger" data-target="project-1-modal">30 Days of Cycle Touring in USA</div>
             </div>
           </div>
           <div class="container-image">
-            <img src="img/tina_assembly.png">
+            <img src="img/vancouver_cycling.png">
             <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-2-modal">Tree Imaging Machine Model</div>
-            </div>
-          </div>
-          
-          <div class="container-image">
-            <img src="img/dpi_measurement_whole.png">
-            <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-2-modal">Calculating Image Resolution with a Slide Scale</div>
-            </div>
-          </div>
-          <div class="container-image">
-            <img src="img/dpi_measurement_zoomed_1.png">
-            <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-2-modal">Calculating Image Resolution with a Slide Scale</div>
-            </div>
-          </div>
-          <div class="container-image">
-            <img src="img/dpi_measurement_zoomed_2.png">
-            <div class="overlay">
-              <div class="hover-text modal-trigger" data-target="project-2-modal">Calculating Image Resolution with a Slide Scale</div>
+              <div class="hover-text modal-trigger" data-target="project-2-modal">Cycling Through Vancouver</div>
             </div>
           </div>
         </div>
