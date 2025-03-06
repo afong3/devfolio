@@ -47,6 +47,8 @@ a.icon > strong {margin-left:.25rem}
 display: flex;
 flex-wrap: wrap;
 padding: 0 4px;
+width: 100%; /* Ensure full width */
+max-width: 100%; /* Prevent it from being restricted */
 }
 
 /* Create equal columns that sits next to each other */
